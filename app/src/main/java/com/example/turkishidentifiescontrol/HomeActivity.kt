@@ -17,10 +17,10 @@ import java.io.ByteArrayInputStream
 import java.time.LocalDate
 import javax.xml.parsers.DocumentBuilderFactory
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
 
         val buttonControl = findViewById<AppCompatButton>(R.id.buttonControl)
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
             try {
                 val response = client.newCall(request).execute()
-                val responseBody = response.body?.string()
+                val responseBody = response.body.string()
 
                 return parseSoapResponse(responseBody)
             } catch (e: Exception) {
