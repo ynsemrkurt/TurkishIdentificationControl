@@ -46,5 +46,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     //OkHttpClient
-    implementation("com.squareup.okhttp:okhttp:2.7.5")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.12")
+
 }
