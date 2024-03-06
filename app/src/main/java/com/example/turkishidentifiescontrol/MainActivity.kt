@@ -14,6 +14,7 @@ import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.NodeList
 import java.io.ByteArrayInputStream
+import java.time.LocalDate
 import javax.xml.parsers.DocumentBuilderFactory
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,22 @@ class MainActivity : AppCompatActivity() {
             val surname = findViewById<TextInputEditText>(R.id.textSurName).text.toString()
             val identityNumber = findViewById<TextInputEditText>(R.id.textIdentityNumber).text.toString()
             val birthYear = findViewById<TextInputEditText>(R.id.textBirthYear).text.toString()
+
+            if (name.isEmpty() || surname.isEmpty() || identityNumber.isEmpty() || birthYear.isEmpty()) {
+                showToast("Lütfen tüm alanları doldurunuz!")
+                return@setOnClickListener
+            }
+            if (identityNumber.length != 11) {
+                showToast("TC Kimlik Numarası 11 haneli olmalıdır!")
+                return@setOnClickListener
+            }
+
+            val currentYear = LocalDate.now().year
+
+            if (birthYear.length != 4 || birthYear.toInt() < 1900 || birthYear.toInt() > currentYear) {
+                showToast("Geçerli bir doğum yılı giriniz!")
+                return@setOnClickListener
+            }
 
             val soapRequestTask = SoapRequestTask()
             soapRequestTask.execute(name, surname, identityNumber, birthYear)
