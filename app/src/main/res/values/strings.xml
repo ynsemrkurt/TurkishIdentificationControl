@@ -10,4 +10,6 @@
     <string name="please_fill_in_all_fields">Please fill in all fields!</string>
     <string name="id_number_must_be_11_digits">ID Number must be 11 digits!</string>
     <string name="please_enter_a_valid_year_of_birth">Please enter a valid year of birth!</string>
+    <string name="your_data_is_not_stored_in_any_way">ⓘ Your data is not stored in any way.</string>
+    <string name="app_logo">App Logo</string>
 </resources>
