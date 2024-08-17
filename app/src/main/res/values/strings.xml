@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Turkish Identifies Control</string>
+    <string name="app_name">Turkish Identification Control</string>
+    <string name="first_name_hint">Legal First Name</string>
+    <string name="surname_hint">Legal Surname</string>
+    <string name="identity_number_hint">ID Number</string>
+    <string name="birth_year_hint">Birth Year</string>
+    <string name="button_text">Verify</string>
+    <string name="verification_successful">Verification Successful</string>
+    <string name="validation_error">Validation Error</string>
+    <string name="please_fill_in_all_fields">Please fill in all fields!</string>
+    <string name="id_number_must_be_11_digits">ID Number must be 11 digits!</string>
+    <string name="please_enter_a_valid_year_of_birth">Please enter a valid year of birth!</string>
 </resources>
